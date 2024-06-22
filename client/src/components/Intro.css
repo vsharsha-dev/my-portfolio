@@ -1,0 +1,32 @@
+.personal-details {
+  padding: 1rem;
+  background-color: #5D0E41;
+  color: #f0d2ea;
+  font-family: "Raleway", sans-serif;
+}
+
+.my-name {
+  font-weight: 800;
+  font-size: 4rem;
+}
+
+.my-description {
+  font-size: 1.2rem;
+}
+
+h1 {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+}
+
+.name-about, .profile-img {
+  padding: 3rem;
+  width: 50%;
+}
+
+/* .profile-img {
+  float: right;
+} */

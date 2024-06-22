@@ -1,0 +1,14 @@
+.header-container {
+  display: flex;
+  background-color: #00224D;
+  padding: 0.5rem;
+}
+
+.MuiButton-root {
+  color: #f0d2ea !important;
+  margin: 0 0.5rem !important;
+}
+
+.header-buttons {
+  margin-left: auto;
+}
