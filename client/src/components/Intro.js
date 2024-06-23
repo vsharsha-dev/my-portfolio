@@ -12,7 +12,7 @@ const Intro = () => {
       </p>
     </div>
     <div className='profile-img'>
-      <img src='../../public/user.png' alt='profile-pic'/>
+      <img src='https://cdn-icons-png.flaticon.com/512/7141/7141724.png' className="profile-pic" alt='profile-pic'/>
     </div>
   </div>
   )

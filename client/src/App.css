@@ -40,3 +40,41 @@
 .App {
   margin: 0;
 }
+
+.header-container {
+  display: flex;
+  background-color: #00224D;
+  padding: 0.5rem;
+}
+
+img {
+  height: 2rem;
+  width: 2rem;
+}
+
+.MuiButton-root {
+  color: #f0d2ea !important;
+  margin: 0 0.5rem !important;
+}
+
+.header-img {
+  display: flex;
+  align-items: center;
+}
+
+.header-title {
+  margin: 0 0.3rem;
+  display: flex;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+  color: #f0d2ea;
+}
+
+.header-buttons {
+  margin-left: auto;
+}
+
+.title {
+  margin: 0;
+}
+
