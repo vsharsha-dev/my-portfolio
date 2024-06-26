@@ -1,0 +1,26 @@
+.skills {
+  margin: 20px;
+  text-align: center;
+  color: #f0d2ea;
+  font-family: "Raleway", sans-serif;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-around;
+}
+
+.skill {
+  margin: 20px;
+  padding: 10px;
+  width: 30%;
+  border: 1px solid #f0d2ea;
+  border-radius: 10px;
+}
+
+.skill-image {
+  height: 50px;
+  width: 50px;
+}
