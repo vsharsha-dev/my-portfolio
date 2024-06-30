@@ -18,6 +18,10 @@ h1 {
   margin: 0;
 }
 
+.greeting {
+  font-size: 1.2rem;
+}
+
 .profile-pic {
   width: 20rem;
   height: 20rem;
@@ -28,8 +32,32 @@ h1 {
 }
 
 .name-about, .profile-img {
-  padding: 3rem;
+  padding: 3rem 7rem;
   width: 50%;
+}
+
+.name-about {
+  padding-left: 10rem;
+}
+
+.profile-img {
+  text-align: center;
+}
+
+
+.github-button, .linkedin-button {
+  border: 1px solid;
+  border-color: #FFB1B1 !important;
+  margin: 3rem 0.5rem !important;
+}
+
+p.github, p.linkedin {
+  margin: 0 1.2rem !important;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-start;
 }
 
 /* .profile-img {
