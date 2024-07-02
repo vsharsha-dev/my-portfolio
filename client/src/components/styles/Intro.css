@@ -46,13 +46,13 @@ h1 {
 
 
 .github-button, .linkedin-button {
-  border: 1px solid;
+  border: 1px solid !important;
   border-color: #FFB1B1 !important;
   margin: 3rem 0.5rem !important;
 }
 
 p.github, p.linkedin {
-  margin: 0 1.2rem !important;
+  margin: 0 1rem !important;
 }
 
 .button-container {

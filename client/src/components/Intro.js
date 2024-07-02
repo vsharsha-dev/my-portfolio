@@ -15,7 +15,7 @@ const Intro = () => {
         Web development, Problem Solving, Algortims, Data Structures, Software Product development
       </p>
       <div className='button-container'>
-        <Button className='github-button'>
+        <Button className='github-button' href='https://github.com/vsharsha-dev'>
           <img src={githubIcon} className='github-img'/>
           <p className='github'>Github</p>
         </Button>
