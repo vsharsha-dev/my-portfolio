@@ -1,17 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import './styles/Projects.css'
 
 const Projects = () => {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
-        // async function fetchProjects() {
-        //     const response = await axios.get('api/projects')
-        //     const data = await response.data;
-        //     setProjects(data);
-        // }
-        // fetchProjects()
-
         axios.get('/api/projects')
             .then(response => {
                 setProjects(response.data);
@@ -22,18 +16,17 @@ const Projects = () => {
             })
     }, [projects])
 
-    return <div>
-        <h1>My Projects</h1>
-        <ul>
-            {
-                projects.map(project => (
-                    <li key={project.id}>
-                        <h2>{project.title}</h2>
-                        <p>{project.description}</p>
-                    </li>
-                ))  
-            }
-        </ul>
+    return <div className='projects'>
+        <h1 className='projects-heading'>Projects</h1>
+        <div className='projects-container'>
+            {projects.map(project => (
+                <div className='project'>
+                    <img className='project-image' src={project.image}/>
+                    <h2 className='project-title'>{project.title}</h2>
+                    <p className='project-description'>{project.description}</p>
+                </div>
+            ))}
+        </div>
     </div>
 }
 

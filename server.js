@@ -15,15 +15,15 @@ const __dirname = dirname(__filename);
 app.use(cors());
 
 // serve static files from the react app
-app.use(express.static(path.join(__dirname, 'client/build')))
+app.use('/static', express.static(path.join(__dirname, 'client/build')))
 
 // 
 app.get('/api/projects', (req, res) => {
     const projects = [
-        {id: 1, title: 'Project 1', description: 'Project 1 description'},
-        {id: 2, title: 'Project 2', description: 'Project 2 description'},
-        {id: 3, title: 'Project 3', description: 'Project 3 description'},
-        {id: 4, title: 'Project 4', description: 'Project 4 description'}
+        {id: 1, title: 'Project 1', image: '/static/images/cpp.png', description: 'Project 1 description'},
+        {id: 2, title: 'Project 2', image: '/static/images/cpp.png', description: 'Project 2 description'},
+        {id: 3, title: 'Project 3', image: '/static/images/cpp.png', description: 'Project 3 description'},
+        {id: 4, title: 'Project 4', image: '/static/images/cpp.png', description: 'Project 4 description'}
     ]
     res.json(projects);
 })
@@ -39,6 +39,16 @@ app.get('/api/skills', (req, res) => {
         {id: 7, title: 'Git and Gitlab', image: "https://git-scm.com/images/logos/downloads/Git-Icon-Black.png", description: 'Experienced with version control using git. Worked in collaboration with teams using Gitlab.'}
     ]
     res.json(skills);
+})
+
+app.get('/api/blogs', (req, res) => {
+    const blogs = [
+        {id: 1, title: 'Blog 1', description: 'Blog 1 description'},
+        {id: 2, title: 'Blog 2', description: 'Blog 2 description'},
+        {id: 3, title: 'Blog 3', description: 'Blog 3 description'},
+        {id: 4, title: 'Blog 4', description: 'Blog 4 description'}
+    ]
+    res.json(blogs);
 })
 
 // All other requests will be handled by the React app
