@@ -20,12 +20,12 @@ app.use('/static', express.static(path.join(__dirname, 'client/build')))
 // 
 app.get('/api/projects', (req, res) => {
     const projects = [
-        {id: 1, title: 'AnimeBio', image: '/static/images/portfolio-animebio.png', description: 'Project 1 description'},
-        {id: 2, title: 'To Do List', image: '/static/images/portfolio-todolist.png', description: 'Project 2 description'},
-        {id: 3, title: 'COVID19 Tracker', image: '/static/images/portfolio-covidapp.png', description: 'Project 3 description'},
-        {id: 4, title: 'Tindog', image: '/static/images/portfolio-tindog.png', description: 'Project 4 description'},
-        {id: 5, title: 'FB Login Page', image: '/static/images/portfolio-fblogin.png', description: 'Project 4 description'},
-        {id: 6, title: 'Simon Game', image: '/static/images/portfolio-simongame.png', description: 'Project 6 description'},
+        {id: 1, title: 'AnimeBio', image: '/static/images/portfolio-animebio.png', description: 'Developed a website to provide users informtion about Anime searched by them. It gives details such as the plot, description, rating, etc.'},
+        {id: 2, title: 'To Do List', image: '/static/images/portfolio-todolist.png', description: 'A ToDoList web application to add or remove items from the list. Connected it to a database to use dynamically.'},
+        {id: 3, title: 'COVID19 Tracker', image: '/static/images/portfolio-covidapp.png', description: 'Developed and deployed a web application to give statistics of current COVID-19 scenario.'},
+        {id: 4, title: 'Tindog', image: '/static/images/portfolio-tindog.png', description: 'Designed a Tinder clone app using CSS.'},
+        {id: 5, title: 'FB Login Page', image: '/static/images/portfolio-fblogin.png', description: 'Replicated the Facebook desktop login page from scratch by using conventional HTML and CSS.'},
+        {id: 6, title: 'Simon Game', image: '/static/images/portfolio-simongame.png', description: 'Created a simple interactive game using CSS and JavaScript.'},
     ]
     res.json(projects);
 })
