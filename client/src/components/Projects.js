@@ -21,7 +21,7 @@ const Projects = () => {
         <div className='projects-container'>
             {projects.map(project => (
                 <div className='project'>
-                    <img className='project-image' src={project.image}/>
+                    <img className='project-image' src={project.image} alt={project.title}/>
                     <h2 className='project-title'>{project.title}</h2>
                     <p className='project-description'>{project.description}</p>
                 </div>

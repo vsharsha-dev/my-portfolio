@@ -3,6 +3,9 @@ import path from "path";
 import cors from "cors";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
+import { PROJECTS } from "./db/projects.js";
+import { BLOGS } from "./db/blogs.js";
+import { SKILLS } from "./db/skills.js";
 
 const app = express()
 const PORT = process.env.PORT || 5000;
@@ -19,43 +22,15 @@ app.use('/static', express.static(path.join(__dirname, 'client/build')))
 
 // 
 app.get('/api/projects', (req, res) => {
-    const projects = [
-        {id: 1, title: 'AnimeBio', image: '/static/images/portfolio-animebio.png', description: 'Developed a website to provide users informtion about Anime searched by them. It gives details such as the plot, description, rating, etc.'},
-        {id: 2, title: 'To Do List', image: '/static/images/portfolio-todolist.png', description: 'A ToDoList web application to add or remove items from the list. Connected it to a database to use dynamically.'},
-        {id: 3, title: 'Travel Planner', image: '/static/images/portfolio-placepicker.jpeg', description: 'Developed an app to select places to travel. Integrated backend to frontend for seamless data exchange. Created React custom Hooks to call backend API endpoints.'},
-        {id: 4, title: 'COVID19 Tracker', image: '/static/images/portfolio-covidapp.png', description: 'Developed and deployed a web application to give statistics of current COVID-19 scenario.'},
-        {id: 5, title: 'Countdown Game', image: '/static/images/portfolio-timegame.jpeg', description: 'Developed a React application to play a time countdown game where user can test their accuracy of time sense.'},
-        {id: 6, title: 'Quiz App', image: '/static/images/portfolio-quizapp.jpeg', description: 'Created a React quiz application which scores the user based on their answers. Implemnted timer for each question.'},
-        {id: 7, title: 'SIP Calculator', image: '/static/images/portfolio-investmentcalculator.jpeg', description: 'A simple react application which can be used to calculate returns on an investment with the given rate of interest.'},
-        {id: 8, title: 'Project Management', image: '/static/images/portfolio-projectmanagement.png', description: 'React app which tracks and displays the projects which need to be done similar to a TODO list.'},
-        {id: 9, title: 'Tindog', image: '/static/images/portfolio-tindog.png', description: 'Designed a Tinder clone app using CSS.'},
-        {id: 10, title: 'FB Login Page', image: '/static/images/portfolio-fblogin.png', description: 'Replicated the Facebook desktop login page from scratch by using conventional HTML and CSS.'},
-        {id: 11, title: 'Simon Game', image: '/static/images/portfolio-simongame.png', description: 'Created a simple interactive game using CSS and JavaScript.'},
-    ]
-    res.json(projects);
+    res.json(PROJECTS);
 })
 
 app.get('/api/skills', (req, res) => {
-    const skills = [
-        {id: 1, title: 'C++', image: `https://cdn.icon-icons.com/icons2/3398/PNG/512/plus_logo_c_icon_214621.png`, description: 'Proficient in C++ programming, problem solving, and Algorithms.'},
-        {id: 2, title: 'Python', image: 'https://cdn4.iconfinder.com/data/icons/scripting-and-programming-languages/512/Python_logo-512.png', description: 'Developed numorous automation scripts using Python programming language.'},
-        {id: 3, title: 'Javascript', image: "https://cdn-icons-png.flaticon.com/512/721/721671.png", description: 'Developed multiple web applications using Javascript programming language.'}, 
-        {id: 4, title: 'Nodejs', image: "https://cdn.icon-icons.com/icons2/2622/PNG/512/brand_nodejs_icon_157858.png", description: 'Created numorous server-side applications and APIs using Nodejs. Please have a look at them in the projects section.'},
-        {id: 5, title: 'React', image: "https://static-00.iconduck.com/assets.00/react-icon-2048x1822-iy7h2x8y.png", description: 'Worked on designing client side app components using React.'},
-        {id: 6, title: 'Data Structures', image: "https://cdn-icons-png.flaticon.com/512/8637/8637707.png", description: 'Familiar with solving complex problems using Data Structures and Algorithms.'},
-        {id: 7, title: 'Git and Gitlab', image: "https://git-scm.com/images/logos/downloads/Git-Icon-Black.png", description: 'Experienced with version control using git. Worked in collaboration with teams using Gitlab.'}
-    ]
-    res.json(skills);
+    res.json(SKILLS);
 })
 
 app.get('/api/blogs', (req, res) => {
-    const blogs = [
-        {id: 1, title: 'Blog 1', description: 'Blog 1 description'},
-        {id: 2, title: 'Blog 2', description: 'Blog 2 description'},
-        {id: 3, title: 'Blog 3', description: 'Blog 3 description'},
-        {id: 4, title: 'Blog 4', description: 'Blog 4 description'}
-    ]
-    res.json(blogs);
+    res.json(BLOGS);
 })
 
 // All other requests will be handled by the React app
