@@ -1,22 +1,10 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
 import { Helmet } from "react-helmet";
 import "./styles/Blogs.css";
+import data from "../db/db.json"
 
 const Blogs = () => {
-  const [blogs, setBlogs] = useState([]);
 
-  useEffect(() => {
-    axios
-      .get("/api/blogs")
-      .then((response) => {
-        setBlogs(response.data);
-        console.log(blogs);
-      })
-      .catch((error) => {
-        console.error("Error fetching blogs: ", error);
-      });
-  }, [blogs]);
+  const blogs = data["blogs"]
 
   return (
     <>
@@ -30,8 +18,8 @@ const Blogs = () => {
           {blogs.length ? (
             blogs.map((blog) => (
               <div className="blog">
-                <h2 className="blog-title">{blog.title}</h2>
-                <p className="blog-description">{blog.description}</p>
+                <h2 className="blog-title">{blog["title"]}</h2>
+                <p className="blog-description">{blog["description"]}</p>
               </div>
             ))
           ) : (

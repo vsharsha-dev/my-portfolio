@@ -11,7 +11,7 @@ const Intro = () => {
         <p className="greeting">Hello there. I'm ..</p>
         <h1 className="my-name">Sai Harsha Vadde</h1>
         <p className="my-description">
-          An aspiring software developer with 3 years of industry experience.
+          An aspiring software developer with 4 years of industry experience.
           Enthusiastic about Web development, Problem Solving, Algortims, Data
           Structures, Software Product development
         </p>
